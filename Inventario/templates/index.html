@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+
+
+<main class="container" >
+    <div class="row">
+        <div class="col-md-10 offset-1 mt-3">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1648824573599-39cdd358edfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            class="d-block w-100" alt="Img1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Sistema de control de inventarios basado en la nube</h3>
+                            <h8>Contribucion de Tech Daily</h8>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1627719172038-611c725920bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            class="d-block w-100" alt="Img3">
+                        <div class="carousel-caption d-none d-md-block ">
+                            <h3 style="color:coral;">Evita la perdida de informacion</h3>
+                            <h8 style="color:coral;">Contribucion de Tech Daily</h8>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1546198632-9ef6368bef12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            class="d-block w-100" alt="Img2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Cambia la manera de gestionar tu inventario</h3>
+                            <h8>Contribucion de Denny Müller</h8>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
+                    <li class="nav-item"><a href="/RegistroU" class="nav-link px-2 text-body-secondary">Registrate Ahora</a></li>
+                    <li class="nav-item"><a href="https://www.poli.edu.co/" class="nav-link px-2 text-body-secondary">Politecnico Grancolombiano</a></li>
+                </ul>
+                <p class="text-center text-body-secondary">© 2023 Politecnico Grancolombiano</p>
+            </footer>
+        </div>
+    </footer>
+</main>
+
+{% endblock %}

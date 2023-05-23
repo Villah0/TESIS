@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center display-3 py-2">Inventario</h1>
+<main class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre producto</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Unidades</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for producto in productos %}
+            <tr>
+                <td>{{producto.Nombre}}</td>
+                <td>{{producto.Marca}}</td>
+                <td>{{producto.Descripcion}}</td>
+                <td>{{producto.Valor}}</td>
+                <td>{{producto.Unidades}}</td>
+                <td>{{producto.user.username}}</td>
+                <td>
+                    <button class="btn btn-warning">
+                        <a class="list-group-item" href={% url "detalleProducto" producto.id %}>
+                            Editar Producto
+                        </a>
+                    </button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+
+<footer>
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="/crearProducto" class="nav-link px-2 text-body-secondary">Crear Producto</a></li>
+                <li class="nav-item"><a href="https://www.poli.edu.co/" class="nav-link px-2 text-body-secondary">Politecnico Grancolombiano</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2023 Politecnico Grancolombiano</p>
+        </footer>
+    </div>
+</footer>
+</main>
+
+{% endblock %}

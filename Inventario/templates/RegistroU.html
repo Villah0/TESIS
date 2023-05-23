@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
+            <form method="POST" class="card card-body">
+                <h1 class="text-center">Registro de Usuario</h1>
+                {{error}}
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username">Usuario:</label>
+                    <input type="text" name="username" id="username" class="form-control"
+                        placeholder="Escribe tu Usuario">
+                </div>
+                <div class="mb-3">
+                    <label for="password1">Contraseña:</label>
+                    <input type="password" name="password1" id="password1" class="form-control"
+                        placeholder="Escribe tu Contraseña">
+                </div>
+                <div class="mb-3">
+                    <label for="password2">Confirma tu contraseña:</label>
+                    <input type="password" name="password2" id="password2" class="form-control"
+                        placeholder="Confirma tu contraseña">
+                </div>
+                <button class="btn btn-primary">
+                    Confirmar
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
+                    <li class="nav-item"><a href="/RegistroU" class="nav-link px-2 text-body-secondary">Registrate Ahora</a></li>
+                    <li class="nav-item"><a href="https://www.poli.edu.co/" class="nav-link px-2 text-body-secondary">Politecnico Grancolombiano</a></li>
+                </ul>
+                <p class="text-center text-body-secondary">© 2023 Politecnico Grancolombiano</p>
+            </footer>
+        </div>
+    </footer>
+</main>
+
+{% endblock %}
